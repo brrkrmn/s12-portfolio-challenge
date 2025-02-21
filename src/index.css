@@ -1,1 +1,32 @@
+@config "../tailwind.config.js";
 @import "tailwindcss";
+
+
+:root {
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #F9F9F9;
+
+  --color-foreground: #1F2937;
+  --color-foreground-secondary: #6B7280;
+  --color-foreground-soft: #777777;
+
+  --color-main: #4338CA;
+  --color-main-light: #7B61FF;
+  --color-main-dark: #3730A3;
+  --color-main-soft: #EEEBFF;
+
+  --color-red: #AF0C48;
+  --color-green: #00AB6B;
+  --color-blue: #0077B5;
+  --color-yellow: #FFE86E;
+  --color-divider: #BAB2E7;
+}
+
+.dark {
+  --color-bg: #000000;
+  --color-bg-secondary: #111827;
+
+  --color-foreground: #e5e7eb;
+  --color-foreground-secondary: #9ca3af;
+  --color-foreground-soft: #6b7280;
+}
