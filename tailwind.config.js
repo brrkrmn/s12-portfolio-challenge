@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      satisfy: ['"Satisfy"', "cursive"],
+      inter: ["Inter", 'serif']
     },
     screens: {
       mobile: "425px",
@@ -11,6 +11,9 @@ module.exports = {
       laptop: "1024px",
     },
     extend: {
+      borderWidth: {
+        small: "1px",
+      },
       colors: {
         bg: {
           DEFAULT: "var(--color-bg)",
