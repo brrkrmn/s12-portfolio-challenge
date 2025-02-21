@@ -2,7 +2,7 @@ import { emailAddress, links } from "./constants"
 
 const Footer = () => {
   return (
-    <section className="flex bg-bg-secondary items-center justify-start w-screen py-20 mt-auto text-md">
+    <section id="hire" className="flex bg-bg-secondary items-center justify-start w-screen py-20 mt-auto text-md">
       <footer className="max-w-[1024px] w-full mx-auto flex flex-col items-start justify-center gap-10 px-2">
         <p className="text-foreground text-3xl tablet:text-4xl font-semibold tablet:w-96 w-full text-center tablet:text-start">
           Let’s work together on your next product.
