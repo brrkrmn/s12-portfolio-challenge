@@ -3,7 +3,6 @@
 
 @config "../tailwind.config.js";
 
-
 :root {
   --color-bg: #FFFFFF;
   --color-bg-secondary: #F9F9F9;
@@ -32,3 +31,20 @@
   --color-foreground-secondary: #9ca3af;
   --color-foreground-soft: #6b7280;
 }
+
+.section-title {
+  @apply text-4xl text-foreground font-semibold
+}
+
+.section-subtitle {
+  @apply text-2xl text-main font-medium
+}
+
+.section-paragraph {
+  @apply text-foreground-secondary text-sm font-light
+}
+
+.divider {
+  @apply w-full text-divider
+}
+
