@@ -1,6 +1,7 @@
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Profile from "./components/Profile/Profile"
+import Projects from "./components/Projects/Projects"
 import Skills from "./components/Skills/Skills"
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         <hr className="divider" />
         <Profile />
         <hr className="divider" />
+        <Projects />
         <Footer />
       </div>
     </div>
