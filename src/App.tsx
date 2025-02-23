@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="flex bg-bg items-center justify-start h-screen w-screen font-inter">
       <div className="flex flex-col gap-14 bg-bg items-center justify-start h-full w-full px-2 tablet:px-10 mx-auto min-w-[320px] max-w-[1024px]">
-        <div className="flex flex-col items-center justify-start w-full gap-2">
+        <div className="flex flex-col items-center justify-start w-full gap-0">
           <Settings />
           <Header />
         </div>
