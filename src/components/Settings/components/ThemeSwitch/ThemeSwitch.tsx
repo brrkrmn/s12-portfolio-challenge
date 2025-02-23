@@ -1,18 +1,18 @@
 import { Switch } from "@heroui/switch";
-import { useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { MdSunny } from "react-icons/md";
+import { useThemeContext } from "../../../../context/ThemeContext";
 
 const ThemeSwitch = () => {
-  const [darkMode, setDarkMode] = useState(false)
+  const { isDarkMode, toggleTheme } = useThemeContext();
 
   return (
     <Switch
-      isSelected={darkMode}
-      onValueChange={setDarkMode}
+      isSelected={isDarkMode}
+      onValueChange={toggleTheme}
       size="sm"
       thumbIcon={
-        darkMode ? <MdSunny /> : <FaMoon />
+        isDarkMode ? <MdSunny /> : <FaMoon />
       }
       classNames={{
         thumb: "bg-transparent group-data-[selected=true]:ms-6",
@@ -21,7 +21,7 @@ const ThemeSwitch = () => {
         thumbIcon: "text-yellow"
       }}
     >
-      DARK MODE
+      {isDarkMode ? "DARK MODE" : "LIGHT MODE"}
     </Switch>
   )
 }

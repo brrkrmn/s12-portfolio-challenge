@@ -32,6 +32,10 @@
   --color-foreground-soft: #6b7280;
 }
 
+body {
+  background-color: var(--color-bg);
+}
+
 .section-title {
   @apply text-4xl text-foreground font-semibold
 }
