@@ -10,7 +10,7 @@ const Profile = () => {
         <div className="flex flex-col gap-4 h-full items-start justify-start basis-2/5">
           <h2 className="section-subtitle">Profile</h2>
           {profile.details.map((item, index) => (
-            <div key={index} className="text-sm text-foreground w-full flex items-start justify-start gap-4">
+            <div key={index} className="text-sm text-foreground dark:text-foreground-secondary w-full flex items-start justify-start gap-4">
               <p className="font-semibold w-28">
                 {item.label}
               </p>

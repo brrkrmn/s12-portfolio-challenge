@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="w-full flex flex-col items-center justify-between tablet:flex-row gap-6">
           <a href={`mailto:${emailAddress}`} className="flex items-center justify-start gap-1">
             <p className="">👉</p>
-            <p className="text-red underline">{emailAddress}</p>
+            <p className="text-red dark:text-divider underline">{emailAddress}</p>
           </a>
           <nav className="flex items-center justify-center gap-5">
             {links.map(link => (

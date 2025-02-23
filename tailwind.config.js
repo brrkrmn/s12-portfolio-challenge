@@ -18,6 +18,7 @@ module.exports = {
         bg: {
           DEFAULT: "var(--color-bg)",
           secondary: "var(--color-bg-secondary)",
+          soft: "var(--color-bg-soft)"
         },
         foreground: {
           DEFAULT: "var(--color-foreground)",
@@ -29,6 +30,7 @@ module.exports = {
           light: "var(--color-main-light)",
           dark: "var(--color-main-dark)",
           soft: "var(--color-main-soft)",
+          text: "var(--color-main-text)"
         },
         divider: "var(--color-divider)",
         red: "var(--color-red)",

@@ -24,12 +24,19 @@
 }
 
 .dark {
-  --color-bg: #000000;
-  --color-bg-secondary: #111827;
+  --color-bg: #252128;
+  --color-bg-secondary: #141414;
+  --color-bg-soft: #383838;
 
-  --color-foreground: #e5e7eb;
-  --color-foreground-secondary: #9ca3af;
+  --color-foreground: #AEBCCF;
+  --color-foreground-secondary: #FFFFFF;
   --color-foreground-soft: #6b7280;
+
+  --color-main: #B7AAFF;
+  --color-main-light: #E1E1FF;
+  --color-main-dark: #8F88FF;
+  --color-main-soft: #4731D3;
+  --color-main-text: #3730A3;
 }
 
 body {

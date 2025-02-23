@@ -8,20 +8,20 @@ const ThemeSwitch = () => {
 
   return (
     <Switch
-      isSelected={isDarkMode}
+      isSelected={!isDarkMode}
       onValueChange={toggleTheme}
       size="sm"
       thumbIcon={
-        isDarkMode ? <MdSunny /> : <FaMoon />
+        isDarkMode ? <FaMoon /> : <MdSunny />
       }
       classNames={{
-        thumb: "bg-transparent group-data-[selected=true]:ms-6",
-        wrapper: "bg-main w-12 h-6",
-        label: "text-foreground-soft font-semibold text-xs font-inter tracking-wide",
+        thumb: "bg-transparent group-data-[selected=true]:ms-8",
+        wrapper: "bg-main dark:bg-bg-soft w-14 h-6",
+        label: "text-foreground-soft dark:text-foreground font-semibold text-xs font-inter tracking-wide",
         thumbIcon: "text-yellow"
       }}
     >
-      {isDarkMode ? "DARK MODE" : "LIGHT MODE"}
+      {isDarkMode ? "LIGHT MODE" : "DARK MODE"}
     </Switch>
   )
 }

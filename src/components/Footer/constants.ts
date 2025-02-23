@@ -3,7 +3,7 @@ export const links = [
     id: "blog-link",
     label: "Personal Blog",
     to: "https://www.berrakaraman.com/",
-    styles: "text-foreground hover:border-foreground"
+    styles: "text-foreground dark:text-foreground-secondary hover:border-foreground"
   },
   {
     id: "github-link",
