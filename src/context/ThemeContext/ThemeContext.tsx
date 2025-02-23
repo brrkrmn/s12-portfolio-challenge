@@ -1,5 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { Theme, ThemeContextValue } from "./ThemeContext.types";
+import { createContext, useContext, useEffect } from "react";
+import useLocalStorage from "../../hooks/useLocalStorage/useLocalStorage";
+import { ThemeContextValue } from "./ThemeContext.types";
 
 export const ThemeContext = createContext<ThemeContextValue>(null);
 
@@ -10,7 +11,7 @@ export const useThemeContext = () => {
 }
 
 const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isDarkMode, setIsDarkMode] = useState<Theme>(false)
+  const [isDarkMode, setIsDarkMode] = useLocalStorage("darkMode", false)
 
   useEffect(() => {
     if (isDarkMode) {
@@ -21,7 +22,7 @@ const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
   }, [isDarkMode])
 
   const toggleTheme = () => {
-    setIsDarkMode(prev => !prev)
+    setIsDarkMode(!isDarkMode)
   }
 
   return (
