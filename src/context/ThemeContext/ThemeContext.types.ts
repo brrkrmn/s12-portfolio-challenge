@@ -1,4 +1,3 @@
-
 export type ThemeContextValue = null | {
   isDarkMode: Theme;
   toggleTheme: () => void;
