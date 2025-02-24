@@ -6,7 +6,7 @@ export const ThemeContext = createContext<ThemeContextValue>(null);
 
 export const useThemeContext = () => {
   const context = useContext(ThemeContext);
-  if (context === null) throw new Error("You can only call this hook inside Theme Context Provider");
+  if (context === null) throw new Error("You can only call this hook inside ThemeContextProvider");
   return context;
 }
 
