@@ -1,3 +1,5 @@
+import { Translations } from "../../services/translations/translations.types";
+
 export type LangContextValue = null | {
   lang: Lang;
   translations: Translations;
@@ -6,7 +8,3 @@ export type LangContextValue = null | {
 }
 
 export type Lang = "tr" | "en"
-
-export type Translations = {
-  [key: string]: string | Translations;
-};

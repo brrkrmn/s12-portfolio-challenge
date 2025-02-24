@@ -1,3 +1,5 @@
+import { Translations } from "../../services/translations/translations.types";
+
 export type Project = {
   id: string;
   title: string;
@@ -7,11 +9,11 @@ export type Project = {
   links: { label: string;  to: string}[]
 }
 
-export const projects: Project[] = [
+export const getProjects = (translations: Translations): Project[] => [
   {
     id: "codymate",
-    title: "Codymate",
-    description: "Make your code presentations stand out! Codymate is a code presentation tool that lets you create interactive code scenes with step-by-step typing animations, transforming your code into engaging slides. Perfect for live demos.",
+    title: translations.projects.codymate.title,
+    description: translations.projects.codymate.description,
     image: "/public/codymate.png",
     stack: [
       "NextJS", "TypeScript", "TanStack"
@@ -22,15 +24,15 @@ export const projects: Project[] = [
         to:  "https://github.com/brrkrmn/codymate",
       },
       {
-        label: "View Site",
+        label: translations.projects.viewLink,
         to: "https://www.codymate.com/",
       }
     ]
   },
   {
     id: "codeandline",
-    title: "Code&Line",
-    description: "Code&Line is a note-taking app designed for developers to provide a more detailed understanding of their code. Its core feature allows users to target specific code lines with each note, aiming for a line-by-line explanation of the snippet.",
+    title: translations.projects.codeandline.title,
+    description: translations.projects.codeandline.description,
     image: "/public/codeandline.png",
     stack: [
       "MongoDB", "NodeJS", "React"
@@ -41,15 +43,15 @@ export const projects: Project[] = [
         to:  "https://github.com/brrkrmn/codeandline-frontend",
       },
       {
-        label: "View Site",
+        label: translations.projects.viewLink,
         to: "https://www.codeandline.com/",
       }
     ]
   },
   {
     id: "cliphoard",
-    title: "Cliphoard",
-    description: "ClipHoard is a Chrome extension. It is a productivity tool to quickly access and copy most-used data within seconds. It uses Chrome storage API to store the clips locally on the user’s machine without requiring authentication.",
+    title: translations.projects.cliphoard.title,
+    description: translations.projects.cliphoard.description,
     image: "/public/cliphoard.png",
     stack: [
       "JSON", "Tailwind", "Webpack"
@@ -60,7 +62,7 @@ export const projects: Project[] = [
         to: "https://github.com/brrkrmn/cliphoard",
       },
       {
-        label: "View Site",
+        label: translations.projects.viewLink,
         to: "https://chromewebstore.google.com/detail/cliphoard/amgfihockidjlcbhljidpcefieldgljf?hl=en-US&utm_source=ext_sidebar",
       }
     ]

@@ -1,9 +1,10 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { Translations } from "../../services/translations/translations.types";
 import { LinkProps } from "../Link";
 
-export const heroLinks: LinkProps[] = [
+export const getLinks = (translations: Translations): LinkProps[] => [
   {
-    label: "Hire me",
+    label: translations.hero.hireLink,
     variant: "solid",
     link: "#hire",
   },

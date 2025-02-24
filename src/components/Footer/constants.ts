@@ -1,7 +1,9 @@
-export const links = [
+import { Translations } from "../../services/translations/translations.types"
+
+export const getLinks = (translations: Translations) => [
   {
     id: "blog-link",
-    label: "Personal Blog",
+    label: translations.footer.blogLink,
     to: "https://www.berrakaraman.com/",
     styles: "text-foreground dark:text-foreground-secondary hover:border-foreground"
   },

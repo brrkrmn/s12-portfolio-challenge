@@ -1,24 +1,26 @@
-export const profile = {
+import { Translations } from "../../services/translations/translations.types";
+
+export const getProfile = (translations: Translations) => ({
   details: [
     {
-      label: "Date of Birth",
-      content: "11.12.2001"
+      label: translations.profile.profileSection.birthday.title,
+      content: translations.profile.profileSection.birthday.content
     },
     {
-      label: "Residence",
-      content: "Ankara, Turkey",
+      label: translations.profile.profileSection.residence.title,
+      content: translations.profile.profileSection.residence.content
     },
     {
-      label: "Education",
-      content: "Bogazici University, FLED",
+      label: translations.profile.profileSection.education.title,
+      content: translations.profile.profileSection.education.content
     },
     {
-      label: "Preferred Role",
-      content: "Frontend, UI"
+      label: translations.profile.profileSection.position.title,
+      content: translations.profile.profileSection.position.content
     },
   ],
     about: [
-    "I’m a frontend developer passionate about crafting aesthetic, intuitive, and high-performance user experiences.",
-    "I love blending design and technology to build seamless interactions, ensuring every detail feels natural and engaging."
+      translations.profile.aboutSection.content1,
+      translations.profile.aboutSection.content2,
   ]
-}
+})
