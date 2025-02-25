@@ -1,3 +1,5 @@
+import { HeroUIProvider } from '@heroui/system'
+import { ToastProvider } from '@heroui/toast'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
@@ -7,10 +9,13 @@ import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <LangContextProvider>
-      <ThemeContextProvider>
-        <App />
-      </ThemeContextProvider>
-    </LangContextProvider>
+    <HeroUIProvider>
+      <LangContextProvider>
+        <ThemeContextProvider>
+          <ToastProvider />
+          <App />
+        </ThemeContextProvider>
+      </LangContextProvider>
+    </HeroUIProvider>
   </StrictMode>,
 )

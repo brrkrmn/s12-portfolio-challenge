@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage/useLocalStorage";
 import translationsService from "../../services/translations/translations";
+import toast from "../../utils/toast/toast";
 import { LangContextValue } from "./LangContext.types";
 
 export const LangContext = createContext<LangContextValue>(null);
@@ -23,7 +24,7 @@ const LangContextProvider = ({ children }: { children: React.ReactNode }) => {
         setTranslations(data[0])
       } catch (error) {
         console.log("Error fetching translations: ", error)
-        setTranslations({})
+        toast(lang === "tr" ? "Dil güncellenemedi" : "Failed to update language")
       }
       setLoading(false)
     }
@@ -34,6 +35,7 @@ const LangContextProvider = ({ children }: { children: React.ReactNode }) => {
   const toggleLang = () => {
     setLoading(true);
     setLang(lang === "tr" ? "en" : "tr");
+    toast(lang === "tr" ? "Dil başarıyla güncellendi" : "Language updated successfully")
   }
 
   return (
