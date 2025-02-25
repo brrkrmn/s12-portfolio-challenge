@@ -7,11 +7,11 @@ const Header = () => {
   const links = getLinks(translations)
 
   return (
-    <div className="w-full flex items-center justify-between">
+    <header className="w-full flex items-center justify-between">
       <div className="aspect-square w-10 mobile:w-14 text-lg bg-main-soft rounded-full text-main-light dark:text-main-dark flex items-center justify-center font-semibold mobile:text-2xl rotate-[30deg] transition hover:rotate-0">
         B
       </div>
-      <nav className="flex items-center justify-center gap-0 mobile:gap-5 *:text-sm mobile:*:text-base">
+      <nav className="flex items-center justify-center gap-0 tablet:gap-5 *:text-sm tablet:*:text-base">
         {links.map(link => (
           <a
             key={link.id}
@@ -22,7 +22,7 @@ const Header = () => {
           </a>
         ))}
       </nav>
-    </div>
+    </header>
   )
 }
 

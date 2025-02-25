@@ -13,7 +13,7 @@ const Skills = () => {
       </h3>
       <div className="flex flex-col tablet:flex-row items-start justify-center gap-10 tablet:gap-20">
         {skills.map(skill => (
-          <div className="flex flex-col items-start justify-center gap-4 w-full max-w-96 tablet:max-w-full">
+          <div key={skill.id} className="flex flex-col items-start justify-center gap-4 w-full max-w-96 tablet:max-w-full">
             <h2 className="section-subtitle">{skill.title}</h2>
             <p className="section-paragraph">{skill.description}</p>
           </div>

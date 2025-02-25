@@ -8,7 +8,7 @@ const Hero = () => {
   const links = getLinks(translations)
 
   return (
-    <div className="w-full flex flex-col items-start justify-start gap-3 max-w-96 tablet:max-w-full tablet:mb-10">
+    <section className="w-full flex flex-col items-start justify-start gap-3 max-w-96 tablet:max-w-full tablet:mb-10">
       <div className="flex items-center justify-start text-main-dark dark:text-main gap-2">
         <span className="border-t-small w-20"></span>
         <p>Berra Karaman</p>
@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
         <img src="/public/profile.png" className="dark:brightness-90 dark:saturate-50 rounded-xl w-full tablet:w-[40%] aspect-[4/3] object-cover shadow-xl" />
       </div>
-    </div>
+    </section>
   )
 }
 

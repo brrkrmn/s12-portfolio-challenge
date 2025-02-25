@@ -2,7 +2,7 @@ import { Project } from "../../constants";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className="w-full tablet:w-[30%] laptop:w-full flex flex-col items-start justify-start gap-4 h-full transition hover:shadow-md py-5 px-2 rounded-xl max-w-96 tablet:max-w-full">
+    <article className="w-full tablet:w-[30%] laptop:w-full flex flex-col items-start justify-start gap-4 h-full transition hover:shadow-md py-5 px-2 rounded-xl max-w-96 tablet:max-w-full">
       <img className="rounded-lg aspect-video" src={project.image} />
       <h2 className="section-subtitle">{project.title}</h2>
       <p className="section-paragraph line-clamp-6">{project.description}</p>
@@ -16,8 +16,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
         ))}
       </ul>
       <div className="w-full flex items-center justify-between text-main-dark dark:text-main-light underline">
-        {project.links.map(link => (
+        {project.links.map((link, index) => (
           <a
+            key={index}
             target="_blank"
             href={link.to}
             className="transition hover:text-main-light dark:hover:text-main-dark"
@@ -26,7 +27,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </a>
         ))}
       </div>
-    </div>
+    </article>
   )
 }
 

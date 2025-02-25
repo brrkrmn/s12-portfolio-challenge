@@ -12,7 +12,7 @@ const Projects = () => {
       <h2 className="section-title">{translations.projects.title}</h2>
       <div className="w-full flex flex-col tablet:flex-row items-center justify-between laptop:gap-14">
         {projects.map(project => (
-          <ProjectCard project={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </section>
