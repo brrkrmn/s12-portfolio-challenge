@@ -11,6 +11,7 @@ const ThemeSwitch = () => {
 
   return (
     <Switch
+      data-testid="theme-switch"
       isSelected={!isDarkMode}
       onValueChange={toggleTheme}
       size="sm"
