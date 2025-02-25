@@ -35,7 +35,7 @@ const LangContextProvider = ({ children }: { children: React.ReactNode }) => {
   const toggleLang = () => {
     setLoading(true);
     setLang(lang === "tr" ? "en" : "tr");
-    toast(lang === "tr" ? "Dil başarıyla güncellendi" : "Language updated successfully")
+    toast(lang === "en" ? "Dil başarıyla güncellendi" : "Language updated successfully")
   }
 
   return (

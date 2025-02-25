@@ -45,9 +45,9 @@ describe("language", () => {
   it("language switch shows toast correctly", () => {
     cy.switchLanguage();
     cy.wait(1000)
-    cy.contains("Language updated successfully").should("be.visible");
+    cy.contains("Dil başarıyla güncellendi").should("be.visible");
     cy.switchLanguage();
     cy.wait(1000)
-    cy.contains("Dil başarıyla güncellendi").should("be.visible");
+    cy.contains("Language updated successfully").should("be.visible");
   })
 })
