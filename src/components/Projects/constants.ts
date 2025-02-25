@@ -14,7 +14,7 @@ export const getProjects = (translations: Translations): Project[] => [
     id: "codymate",
     title: translations.projects.codymate.title,
     description: translations.projects.codymate.description,
-    image: "/public/codymate.png",
+    image: "/codymate.png",
     stack: [
       "NextJS", "TypeScript", "TanStack"
     ],
@@ -33,7 +33,7 @@ export const getProjects = (translations: Translations): Project[] => [
     id: "codeandline",
     title: translations.projects.codeandline.title,
     description: translations.projects.codeandline.description,
-    image: "/public/codeandline.png",
+    image: "/codeandline.png",
     stack: [
       "MongoDB", "NodeJS", "React"
     ],
@@ -52,7 +52,7 @@ export const getProjects = (translations: Translations): Project[] => [
     id: "cliphoard",
     title: translations.projects.cliphoard.title,
     description: translations.projects.cliphoard.description,
-    image: "/public/cliphoard.png",
+    image: "/cliphoard.png",
     stack: [
       "JSON", "Tailwind", "Webpack"
     ],
