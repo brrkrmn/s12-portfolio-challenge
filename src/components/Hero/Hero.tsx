@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
       <div className="flex flex-col-reverse tablet:flex-row items-start justify-between">
         <div className="flex flex-col items-start jusify-start gap-8">
-          <h1 className="text-4xl laptop:text-6xl text-foreground font-semibold pt-6">
+          <h1 data-testid="hero-title" className="text-4xl laptop:text-6xl text-foreground font-semibold pt-6">
             {translations.hero.title}
           </h1>
           <p className="section-paragraph w-full tablet:w-[70%] tracking-wide">
