@@ -10,7 +10,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         {project.stack.map((stack, index) => (
           <li
             key={index}
-            className="dark:bg-bg-soft border-small border-main-dark text-main-dark w-20 py-1 px-2 text-xs font-medium rounded-md text-center transition hover:bg-main-dark light:hover:text-white dark:hover:bg-bg">
+            className="dark:bg-bg-soft border-small border-main-dark text-main-dark w-20 py-1 px-2 text-xs font-medium rounded-md text-center transition hover:bg-main-dark hover:text-white dark:hover:bg-bg">
             {stack}
           </li>
         ))}
