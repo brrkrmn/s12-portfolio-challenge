@@ -8,10 +8,10 @@ const Header = () => {
 
   return (
     <div className="w-full flex items-center justify-between">
-      <div className="aspect-square w-12 mobile:w-14 bg-main-soft rounded-full text-main-light dark:text-main-dark flex items-center justify-center font-semibold text-2xl rotate-[30deg] transition hover:rotate-0">
+      <div className="aspect-square w-10 mobile:w-14 text-lg bg-main-soft rounded-full text-main-light dark:text-main-dark flex items-center justify-center font-semibold mobile:text-2xl rotate-[30deg] transition hover:rotate-0">
         B
       </div>
-      <nav className="flex items-center justify-center gap-1 mobile:gap-5">
+      <nav className="flex items-center justify-center gap-0 mobile:gap-5 *:text-sm mobile:*:text-base">
         {links.map(link => (
           <a
             key={link.id}
