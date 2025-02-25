@@ -4,7 +4,7 @@ import { getLinks } from "./constants";
 
 const Hero = () => {
   const translations = useLangContext().translations;
-  if (!translations) return null;
+  if (!translations.hero) return null;
   const links = getLinks(translations)
 
   return (

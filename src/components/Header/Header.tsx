@@ -3,7 +3,7 @@ import { getLinks } from "./constants";
 
 const Header = () => {
   const translations = useLangContext().translations;
-  if (!translations) return null;
+  if (!translations.header) return null;
   const links = getLinks(translations)
 
   return (

@@ -4,7 +4,7 @@ import { getProjects } from "./constants";
 
 const Projects = () => {
   const translations = useLangContext().translations;
-  if (!translations) return null;
+  if (!translations.projects) return null;
   const projects = getProjects(translations);
 
   return (

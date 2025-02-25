@@ -3,7 +3,7 @@ import { emailAddress, getLinks } from "./constants";
 
 const Footer = () => {
   const translations = useLangContext().translations
-  if (!translations) return null
+  if (!translations.footer) return null
   const links = getLinks(translations);
 
   return (

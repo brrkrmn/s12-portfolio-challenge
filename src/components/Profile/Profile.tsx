@@ -3,7 +3,7 @@ import { getProfile } from "./constants";
 
 const Profile = () => {
   const translations = useLangContext().translations;
-  if (!translations) return null;
+  if (!translations.profile) return null;
   const profile = getProfile(translations);
 
   return (

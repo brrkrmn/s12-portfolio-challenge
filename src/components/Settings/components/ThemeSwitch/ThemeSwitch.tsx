@@ -7,7 +7,7 @@ import { useThemeContext } from "../../../../context/ThemeContext";
 const ThemeSwitch = () => {
   const translations = useLangContext().translations;
   const { isDarkMode, toggleTheme } = useThemeContext();
-  if (!translations) return null;
+  if (!translations.settings) return null;
 
   return (
     <Switch

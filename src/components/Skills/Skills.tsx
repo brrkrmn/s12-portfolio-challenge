@@ -3,7 +3,7 @@ import { getSkills } from "./constants";
 
 const Skills = () => {
   const translations = useLangContext().translations;
-  if (!translations) return null;
+  if (!translations.skills) return null;
   const skills = getSkills(translations);
 
   return (
