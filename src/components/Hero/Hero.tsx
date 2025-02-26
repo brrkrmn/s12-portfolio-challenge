@@ -26,7 +26,7 @@ const Hero = () => {
             ))}
           </div>
         </div>
-        <img src="/profile.png" className="dark:brightness-90 dark:saturate-50 rounded-xl w-full tablet:w-[40%] aspect-[4/3] object-cover shadow-xl" />
+        <img   loading="lazy" src="/profile.png" className="dark:brightness-90 dark:saturate-50 rounded-xl w-full tablet:w-[40%] aspect-[4/3] object-cover shadow-xl" />
       </div>
     </section>
   )

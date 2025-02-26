@@ -4,7 +4,7 @@ const toast = (content: string) => {
   addToast({
     title: content,
     variant: "flat",
-    timeout: 3000,
+    timeout: 1000,
     classNames: {
       base: "rounded-lg bg-bg-secondary border-main-dark text-main-dark",
       title: "text-main-dark",
