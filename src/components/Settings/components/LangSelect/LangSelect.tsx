@@ -1,20 +1,9 @@
-import { Spinner } from "@heroui/spinner";
 import { useLangContext } from "../../../../context/LangContext";
 
 const LangSelect = () => {
-  const { toggleLang, translations, lang, loading} = useLangContext();
-  if (!translations.settings) return null;
+  const { toggleLang, translations, lang} = useLangContext();
 
-  if (loading) return <Spinner
-    variant="dots"
-    size="md"
-    classNames={{
-      base: "w-36",
-      dots: "text-main bg-main"
-    }}
-  />
-
-   return (
+  return (
     <button
       aria-label={lang === "en" ? "Dili Türkçe'ye değiştir" : "Switch language to English"}
       data-testid="lang-switch"
