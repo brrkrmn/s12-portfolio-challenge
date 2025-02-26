@@ -1,19 +1,19 @@
 import { Translations } from "../../services/translations/translations.types";
 
-export const getSkills = (translations: Translations) => [
+export const getSkills = (translations: Translations["skills"]) => [
   {
     id: "js",
-    title: translations.skills.js.title,
-    description: translations.skills.js.description
+    title: translations.js.title,
+    description: translations.js.description
   },
   {
     id: "reactjs",
-    title: translations.skills.react.title,
-    description: translations.skills.react.description
+    title: translations.react.title,
+    description: translations.react.description
   },
   {
     id: "nodejs",
-    title: translations.skills.node.title,
-    description: translations.skills.node.description
+    title: translations.node.title,
+    description: translations.node.description
   },
 ]

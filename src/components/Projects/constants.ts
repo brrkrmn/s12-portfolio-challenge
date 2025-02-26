@@ -9,11 +9,11 @@ export type Project = {
   links: { label: string;  to: string}[]
 }
 
-export const getProjects = (translations: Translations): Project[] => [
+export const getProjects = (translations: Translations["projects"]): Project[] => [
   {
     id: "codymate",
-    title: translations.projects.codymate.title,
-    description: translations.projects.codymate.description,
+    title: translations.codymate.title,
+    description: translations.codymate.description,
     image: "/codymate.png",
     stack: [
       "NextJS", "TypeScript", "TanStack"
@@ -24,15 +24,15 @@ export const getProjects = (translations: Translations): Project[] => [
         to:  "https://github.com/brrkrmn/codymate",
       },
       {
-        label: translations.projects.viewLink,
+        label: translations.viewLink,
         to: "https://www.codymate.com/",
       }
     ]
   },
   {
     id: "codeandline",
-    title: translations.projects.codeandline.title,
-    description: translations.projects.codeandline.description,
+    title: translations.codeandline.title,
+    description: translations.codeandline.description,
     image: "/codeandline.png",
     stack: [
       "MongoDB", "NodeJS", "React"
@@ -43,15 +43,15 @@ export const getProjects = (translations: Translations): Project[] => [
         to:  "https://github.com/brrkrmn/codeandline-frontend",
       },
       {
-        label: translations.projects.viewLink,
+        label: translations.viewLink,
         to: "https://www.codeandline.com/",
       }
     ]
   },
   {
     id: "cliphoard",
-    title: translations.projects.cliphoard.title,
-    description: translations.projects.cliphoard.description,
+    title: translations.cliphoard.title,
+    description: translations.cliphoard.description,
     image: "/cliphoard.png",
     stack: [
       "JSON", "Tailwind", "Webpack"
@@ -62,7 +62,7 @@ export const getProjects = (translations: Translations): Project[] => [
         to: "https://github.com/brrkrmn/cliphoard",
       },
       {
-        label: translations.projects.viewLink,
+        label: translations.viewLink,
         to: "https://chromewebstore.google.com/detail/cliphoard/amgfihockidjlcbhljidpcefieldgljf?hl=en-US&utm_source=ext_sidebar",
       }
     ]

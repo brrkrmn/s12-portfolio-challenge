@@ -5,9 +5,8 @@ import { useLangContext } from "../../../../context/LangContext";
 import { useThemeContext } from "../../../../context/ThemeContext";
 
 const ThemeSwitch = () => {
-  const translations = useLangContext().translations;
+  const translations = useLangContext().translations.settings;
   const { isDarkMode, toggleTheme } = useThemeContext();
-  if (!translations.settings) return null;
 
   return (
     <Switch
@@ -25,7 +24,7 @@ const ThemeSwitch = () => {
         thumbIcon: "text-yellow"
       }}
     >
-      {isDarkMode ? translations.settings.theme.light : translations.settings.theme.dark}
+      {isDarkMode ? translations.theme.light : translations.theme.dark}
     </Switch>
   )
 }

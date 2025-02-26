@@ -3,8 +3,7 @@ import Link from "../Link/Link";
 import { getLinks } from "./constants";
 
 const Hero = () => {
-  const translations = useLangContext().translations;
-  if (!translations.hero) return null;
+  const translations = useLangContext().translations.hero
   const links = getLinks(translations)
 
   return (
@@ -16,10 +15,10 @@ const Hero = () => {
       <div className="flex flex-col-reverse tablet:flex-row items-start justify-between">
         <div className="flex flex-col items-start jusify-start gap-8">
           <h1 data-testid="hero-title" className="text-4xl laptop:text-6xl text-foreground font-semibold pt-6">
-            {translations.hero.title}
+            {translations.title}
           </h1>
           <p className="section-paragraph w-full tablet:w-[70%] tracking-wide">
-            {translations.hero.description}
+            {translations.description}
           </p>
           <div className="w-full flex-wrap flex items-center justify-start gap-2">
             {links.map((link, index) => (

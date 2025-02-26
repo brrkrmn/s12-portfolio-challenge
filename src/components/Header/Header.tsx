@@ -2,8 +2,7 @@ import { useLangContext } from "../../context/LangContext";
 import { getLinks } from "./constants";
 
 const Header = () => {
-  const translations = useLangContext().translations;
-  if (!translations.header) return null;
+  const translations = useLangContext().translations.header
   const links = getLinks(translations)
 
   return (
