@@ -1,6 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useMemo } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage/useLocalStorage";
-import translationsService from "../../services/translations/translations";
+import { useGetEn, useGetTr } from "../../hooks/useTranslations";
 import toast from "../../utils/toast/toast";
 import { LangContextValue } from "./LangContext.types";
 
@@ -13,38 +13,27 @@ export const useLangContext = () => {
 }
 
 const LangContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [lang, setLang] = useLocalStorage("lang", "en")
-  const [translations, setTranslations] = useLocalStorage("translations", {})
-  const [loading, setLoading] = useState<boolean>(false);
+  const [lang, setLang] = useLocalStorage("lang", "en");
+  const { data: trTranslations } = useGetTr();
+  const { data: enTranslations } = useGetEn();
 
-  useEffect(() => {
-    const getTranslations = async () => {
-      try {
-        const data = lang === "tr" ? await translationsService.getTr() : await translationsService.getEn();
-        setTranslations(data[0])
-      } catch (error) {
-        console.log("Error fetching translations: ", error)
-        toast(lang === "tr" ? "Dil güncellenemedi" : "Failed to update language")
-      }
-      setLoading(false)
-    }
-
-    getTranslations();
-  }, [lang])
+  const translations = useMemo(() => {
+    return lang === "tr"
+      ? trTranslations && trTranslations[0]
+      : enTranslations && enTranslations[0]
+  }, [lang, trTranslations, enTranslations]);
 
   const toggleLang = () => {
-    setLoading(true);
     setLang(lang === "tr" ? "en" : "tr");
     toast(lang === "en" ? "Dil başarıyla güncellendi" : "Language updated successfully")
   }
 
-  return (
+  if (translations) return (
     <LangContext.Provider
       value={{
         lang,
         translations,
         toggleLang,
-        loading,
       }}
     >
       {children}
